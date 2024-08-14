@@ -88,26 +88,26 @@ const About = () => {
     <div>
       {" "}
       <div
-        className=" px-5 sm:px-[35px] md:px-[70px] 3xl:px-[20%] py-[60px] "
+        className=" px-5 sm:px-[35px] md:px-[70px] 3xl:px-[15%] 4xl:px-[20%] py-[60px] "
         id="about"
       >
-        <h2 className="text-center text-[24px] md:text-[36px] font-[700] mt-5">
+        <h2 className="text-center text-[24px] md:text-[30px] lg:text-[36px] 3xl:text-[50px] font-[700] mt-5">
           A catalyst for informed decision-making and a hub for insightful
           analysis.
         </h2>
-        <p className="text-center text-[20px] lg:text-[24px] font-[600]">
+        <p className="text-center text-[20px] lg:text-[24px] 3xl:text-[36px] font-[600]">
           (More than just a media platform)
         </p>
         <div
           className={`flex flex-col lg:flex-row gap-2 justify-center py-20 `}
         >
           <div
-            className={`w-full lg:w-[28%] h-[max-content]  ${
+            className={`w-full lg:w-[28%] 3xl:w-[35%] h-[max-content]  ${
               darkMode ? "bg-[#eaecee] text-black" : "bg-black text-white"
             } rounded-[2.5em] hidden lg:flex flex-col py-10 px-5 2xl:px-7`}
           >
             <div className="flex justify-between items-center">
-              <p className="text-[17px]">Light theme</p>
+              <p className="text-[17px] 3xl:text-[26px]">Light theme</p>
               <Switch
                 className="h-[10px]"
                 checked={darkMode}
@@ -115,7 +115,7 @@ const About = () => {
               />
             </div>
             <p
-              className={`py-5 text-justify text-[14.5px] my-10 px-4 xl:px-10`}
+              className={`py-5 text-justify text-[14.5px] 3xl:text-[20px] my-10 px-4 xl:px-10`}
             >
               {" "}
               "At NewsQuant, we are more than just a media platform; we are a
@@ -124,24 +124,24 @@ const About = () => {
             </p>
             <a
               href="/#topstories"
-              className="bg-black rounded-[20px] text-[#eaecee] w-[max-content] px-5 h-[30px] pb-1 flex justify-center items-center"
+              className="bg-black 3xl:text-[24px] 3xl:h-[40px] 3xl:px-7 rounded-[20px] text-[#eaecee] w-[max-content] px-5 h-[30px] pb-1 flex justify-center items-center"
             >
               newsquat
             </a>
           </div>
 
           <div
-            className={`w-full lg:w-[65%] min-h-[550px] lg:h-[550px]  px-5 lg:px-10 2xl:px-20 py-10  ${
+            className={`w-full lg:w-[65%] min-h-[550px] lg:h-[550px] 3xl:h-[auto]  px-5 lg:px-10 2xl:px-20 py-10  ${
               darkMode ? "bg-[#eaecee] text-black" : "bg-black text-white"
             } rounded-[2.5em]`}
           >
             {!GetUsaNewsMutate.isPending && usaNews !== null && (
               <div className="flex flex-col lg:flex-row justify-between">
                 <div className="mb-5 ">
-                  <p className="text-[24px] lg:text-[34px] font-[700]">
+                  <p className="text-[24px] lg:text-[34px] 3xl:text-[45px] font-[700]">
                     {day}, {month}
                   </p>
-                  <p className="text-[24px] lg:text-[30px] my-2">
+                  <p className="text-[24px] lg:text-[30px] 3xl:text-[38px] my-2">
                     {hours}:{minutes} <span>{ampm}</span>
                   </p>
 
@@ -152,7 +152,7 @@ const About = () => {
                           <a
                             href={item?.url || item.web_url}
                             target="_blank"
-                            className={`text-[14px] capitalize max-w-[275px]  ${
+                            className={`text-[14px] 3xl:text-[18px] capitalize max-w-[275px]  ${
                               darkMode ? " text-black" : "text-[#eaecee]"
                             } text-justify`}
                           >

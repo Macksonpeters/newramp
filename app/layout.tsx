@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={lato.className}>
         <Providers>
-          <main className="max-w-[1920px] flex flex-col mx-auto items-center justify-center overflow-x-hidden">
+          <main className="max-w-[2560px] flex flex-col mx-auto items-center justify-center overflow-x-hidden">
             <div>
               <Navigation />
             </div>

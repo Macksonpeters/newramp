@@ -68,7 +68,7 @@ const OurStory = () => {
                     >
                       <div className="w-full lg:w-[70%]">
                         <h3
-                          className={`text-[20px] md:text-[35px] font-[700] capitalize `}
+                          className={`text-[20px] md:text-[30px] lg::text-[35px] 3xl:text-[45px] font-[700] capitalize `}
                         >
                           {item?.title}
                         </h3>
@@ -84,7 +84,7 @@ const OurStory = () => {
                             alt="img"
                           />
                         </div>
-                        <p>"{item?.abstract}"</p>
+                        <p className="3xl:text-[24px]">"{item?.abstract}"</p>
                       </div>
                       <div className="relative lg:top-[-100px]">
                         <img

@@ -48,10 +48,10 @@ const Navigation = () => {
       className={`fixed left-0 right-0 z-50 flex gap-4 sm:gap-[50px] xl:gap-[120px] mx-auto justify-center items-center  ${
         isInView
           ? "bg-transparent text-white w-[100%] scale-100 mt-[10px]"
-          : " bg-black text-white w-[fit-content] px-10 scale-110 sm:scale-[110%] mt-5 rounded-[20px] py-[5px]"
+          : " bg-black text-white w-[fit-content] px-10 scale-110 sm:scale-[110%] mt-5 rounded-[20px] py-[5px] 3xl:py-[15px] 3xl:rounded-[40px]"
       } transition-transform duration-700 ease-in-out`}
     >
-      <div className="font-[600] text-[20px]">
+      <div className="font-[600] text-[20px] 3xl:text-[28px]">
         <a href="/">newsquat.</a>
       </div>
       <header>
@@ -60,7 +60,7 @@ const Navigation = () => {
             return (
               <li
                 key={index}
-                className={`capitalize  hover:text-gray-400 ${
+                className={`capitalize 3xl:text-[28px]  hover:text-gray-400 ${
                   header == index
                     ? "text-gray-300 scale-110 sm:scale-125"
                     : "text-gray-100 scale-100"
@@ -77,23 +77,19 @@ const Navigation = () => {
               {" "}
               <CiMenuFries />
             </SheetTrigger>
-            <SheetContent
-              className={`bg-black text-gray-200 ${montserrat.className}`}
-            >
+            <SheetContent className={`bg-black text-gray-200 `}>
               <SheetHeader>
-                <SheetTitle
-                  className={`text-gray-200 font-[500] text-start tracking-widest `}
-                >
+                <SheetTitle className={`text-gray-200 font-[500] text-start  `}>
                   Menu
                 </SheetTitle>
-                <SheetDescription className="text-gray-200 h-[50svh] tracking-widest overflow-y-hidden flex flex-col  justify-center">
+                <SheetDescription className="text-gray-200 h-[auto] min-h-[70vh] tracking-wide overflow-y-hidden flex flex-col  justify-end">
                   <ul className=" flex flex-col gap-6 md:hidden">
                     {headers?.map((item: any, index: any) => {
                       return (
                         <li
                           key={index}
                           // onClick={() => handleClick(index)}
-                          className={` text-[20px] text-start hover:text-gray-400 ${
+                          className={` text-[20px]  text-start hover:text-gray-400 ${
                             header == index
                               ? "text-gray-300 scale-110 sm:scale-125"
                               : "text-gray-200 scale-100"
@@ -106,6 +102,14 @@ const Navigation = () => {
                       );
                     })}
                   </ul>
+                  <p className="text-justify pt-10 text-[14px]">
+                    Explore NewsQuant for insightful articles, in-depth
+                    analysis, and expert opinions designed to empower
+                    organizations. Whether you're seeking the latest trends,
+                    industry insights, or thought leadership, NewsQuant delivers
+                    tailored content that drives informed decisions and enhances
+                    your strategic vision.
+                  </p>
                 </SheetDescription>
               </SheetHeader>
             </SheetContent>

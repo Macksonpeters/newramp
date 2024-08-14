@@ -74,14 +74,14 @@ const Feature = () => {
       const interval = setInterval(() => {
         setProgress((prev) => (prev < 100 ? prev + 3 : prev));
         setReturnProgress((prev) => (prev > 0 ? prev - 1 : prev));
-      }, 30);
+      }, 100);
 
       return () => clearInterval(interval);
     } else {
       const interval = setInterval(() => {
         setProgress((prev) => (prev > 0 ? prev - 3 : prev));
         setReturnProgress((prev) => (prev < 100 ? prev + 1 : prev));
-      }, 10);
+      }, 100);
 
       return () => clearInterval(interval);
     }
@@ -89,10 +89,10 @@ const Feature = () => {
 
   return (
     <div
-      className=" px-5 sm:px-[35px] md:px-[70px] 3xl:px-[20%] pb-[60px]"
+      className=" px-5 sm:px-[35px] md:px-[70px] 3xl:px-[15%] 4xl:px-[20%] pb-[60px]"
       id="topstories"
     >
-      <p className={`text-[20.5px] lg:text-[24px]`}>
+      <p className={`text-[20.5px] lg:text-[24px] 3xl:text-[39px]`}>
         Empowering decision-makers with sharp, real-time insights — delivering
         the news that matters, exactly when it counts.
       </p>
@@ -111,13 +111,13 @@ const Feature = () => {
       )}
 
       {!GetTopNewsMutate.isPending && topNews !== null && (
-        <div className="relative mx-[-18px] top-5 sm:me-[-35px] md:me-[-70px] 3xl:me-[-20%] py-5 md:py-10 h-[300px] md:min-h-[40vh] flex justify-center items-center flex-col">
+        <div className="relative mx-[-18px] top-5 sm:me-[-35px] md:me-[-70px] 3xl:me-[-20%] py-5 md:py-10 h-[300px] md:min-h-[40vh] 3xl:min-h-[350px] flex justify-center items-center flex-col">
           <FeatureSlider direction={false} data={topNews} />
         </div>
       )}
 
       {!GetAfricaNewsMutate.isPending && africaNews !== null && (
-        <div className="relative mx-[-18px] top-1 lg:top-0 sm:ms-[-35px] md:ms-[-70px] 3xl:ms-[-20%] py-5 md:py-10 h-[300px] md:min-h-[40vh] flex justify-center items-center flex-col">
+        <div className="relative mx-[-18px] top-1 lg:top-0 sm:ms-[-35px] md:ms-[-70px] 3xl:ms-[-20%] py-5 md:py-10 h-[300px] md:min-h-[40vh] 3xl:min-h-[350px] flex justify-center items-center flex-col">
           <FeatureSlider direction={true} data={africaNews} />
         </div>
       )}
