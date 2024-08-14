@@ -14,7 +14,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Newspaut",
+  title: "Newsqaut",
   description: "Excellence at it's peak",
 };
 
