@@ -33,7 +33,7 @@ const OurStory = () => {
         setAnimate(newValue);
         return newValue;
       });
-    }, 7000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [isIncrementing]);
@@ -53,8 +53,10 @@ const OurStory = () => {
                 ?.slice(firstSliceValue, secondSliceValue)
                 ?.map((item: any, index: any) => {
                   return (
-                    <div
+                    <a
                       key={index}
+                      href={item?.url || item.web_url}
+                      target="_blank"
                       className={`py-1 flex flex-col items-center lg:flex-row justify-between gap-10 lg:gap-0
                         
                         ${
@@ -98,7 +100,7 @@ const OurStory = () => {
                           alt="img"
                         />
                       </div>
-                    </div>
+                    </a>
                   );
                 })}
             </div>
